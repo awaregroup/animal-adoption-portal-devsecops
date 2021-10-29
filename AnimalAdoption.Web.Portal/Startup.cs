@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
@@ -42,6 +43,12 @@ namespace AnimalAdoption.Web.Portal
                 options.UseSqlServer(_connectionString);
             });
 
+            // Required so that Azure FrontDoor will work with authentication
+            services.Configure<ForwardedHeadersOptions>(options =>
+            {
+              options.ForwardedHeaders = ForwardedHeaders.XForwardedHost | ForwardedHeaders.XForwardedProto;
+            });
+            
             services.AddHttpContextAccessor();
             services.AddMemoryCache();
             services.AddTransient<AnimalService>();
@@ -79,7 +86,8 @@ namespace AnimalAdoption.Web.Portal
             }
 
             db.Database.EnsureCreated();
-
+            // Required so that Azure FrontDoor will work with authentication
+            app.UseForwardedHeaders();
             app.UseStaticFiles();
 
             var failurePercentage = Configuration.GetValue<int?>("SimulatedFailureChance");
