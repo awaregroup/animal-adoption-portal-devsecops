@@ -1,20 +1,20 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Introduction
+This repository contains an example web portal for a hypothetical animal adoption agency for the purposes of the DevSecOps Azure Sprint Series. This code has been intentionally developed as a simple demonstration and should not be used as a base for any production development. For more information on how to develop microservices and .NET Core services please refer to the following links.
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+- [.NET Architecture Guides](https://dotnet.microsoft.com/learn/dotnet/architecture-guides)
+- [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+# Instructions
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+Install the following prerequisites:
+- [.NET Core 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
+- Any version of [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/) or [Visual Studio Code](https://visualstudio.microsoft.com/downloads/) (with the C# extension installed)
+- [Git](https://git-scm.com/download/)
+- Up-to-date Chrome, Firefox, or Edge browser
+
+Clone the Git repository and open the root folder in Visual Studio / Visual Studio Code. Push F5 to start debugging.
+
+We recommend using a free [Windows Virtual Machine](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/) for development if your development environment does not support installation of the .NET Core SDK.
+
+When the services are running you can view and interact with the front end portal [here](http://localhost:5000/).
