@@ -9,7 +9,7 @@
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "build",
-      "program": "${workspaceFolder}/AnimalAdoption.Web.Portal/bin/Debug/net5.0/AnimalAdoption.Web.Portal.dll",
+      "program": "${workspaceFolder}/AnimalAdoption.Web.Portal/bin/Debug/net6.0/AnimalAdoption.Web.Portal.dll",
       "args": [],
       "cwd": "${workspaceFolder}/AnimalAdoption.Web.Portal",
       "stopAtEntry": false,
