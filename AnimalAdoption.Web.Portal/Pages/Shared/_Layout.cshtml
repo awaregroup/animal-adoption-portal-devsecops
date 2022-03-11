@@ -44,7 +44,14 @@
                     }
                 </div>
                 <div>
-                    
+                    @if (User.Identity?.IsAuthenticated == true)
+                    {
+                        <a class="nav-link text-dark" asp-area="MicrosoftIdentity" asp-controller="Account" asp-action="SignOut">Sign out</a>
+                    }
+                    else
+                    {
+                        <a class="nav-link text-dark" asp-area="MicrosoftIdentity" asp-controller="Account" asp-action="SignIn">Sign in</a>
+                    }
                 </div>
             </div>
         </nav>
