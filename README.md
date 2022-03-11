@@ -8,7 +8,7 @@ This repository contains an example web portal for a hypothetical animal adoptio
 # Instructions
 
 Install the following prerequisites:
-- [.NET Core 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
+- [.NET Core 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
 - Any version of [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/) or [Visual Studio Code](https://visualstudio.microsoft.com/downloads/) (with the C# extension installed)
 - [Git](https://git-scm.com/download/)
 - Up-to-date Chrome, Firefox, or Edge browser
